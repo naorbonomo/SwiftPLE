@@ -1,0 +1,8 @@
+# Xcode / SPM
+.DS_Store
+.build/
+Packages/
+xcuserdata/
+*.xcuserstate
+DerivedData/
+.swiftpm/

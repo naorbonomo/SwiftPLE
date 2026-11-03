@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.cache/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+
+# Large model binaries
+*.bin
+*.safetensors
+*.litertlm
+
+# Virtual environments
+.venv/
+venv/
+env/
+

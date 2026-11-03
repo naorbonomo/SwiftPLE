@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ple-splitter"
+version = "0.1.0"
+description = "Extracts Per-Layer Embedding (PLE) tables from Gemma models into zero-copy mmap binary format for SwiftPLE"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "SwiftPLE Contributors" }
+]
+keywords = ["mlx", "gemma", "apple-silicon", "ios", "mmap", "quantization", "llm"]
+dependencies = [
+    "mlx>=0.21.0",
+    "numpy>=1.24.0",
+    "huggingface_hub>=0.20.0",
+    "safetensors>=0.4.0",
+]
+
+[project.scripts]
+ple-split = "ple_splitter.cli:main"
+ple-upload = "ple_splitter.uploader:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ple_splitter*"]
